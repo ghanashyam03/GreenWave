@@ -1,0 +1,112 @@
+<!-- simulation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Simulation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        li:hover {
+            transform: scale(1.05);
+        }
+        
+    </style>
+ 
+</head>
+<body>
+
+<h1>Traffic Simulation</h1>
+
+<form method="post" action="/">
+    <label for="num_vehicles">Number of Vehicles:</label>
+    <input type="number" name="num_vehicles" id="num_vehicles" required>
+    <br>
+
+    <label for="initial_speed">Initial Speed of Vehicles:</label>
+    <input type="number" name="initial_speed" id="initial_speed" required>
+    <br>
+
+    <label for="time_steps">Number of Simulation Time Steps:</label>
+    <input type="number" name="time_steps" id="time_steps" required>
+    <br>
+
+    <input type="submit" value="Start Simulation">
+</form>
+
+{% if simulation_results %}
+    <h2>Simulation Results</h2>
+    <ul>
+        {% for result in simulation_results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+</body>
+</html>
