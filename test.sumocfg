@@ -1,12 +1,12 @@
 <configuration>
 
 <input>
-<net-file value="network.net.xml"/>
-<route-files value="kochi.rou.xml"/>
+<net-file value="hello.net.xml"/>
+<route-files value="hello.rou.xml"/>
 </input>
 <time>
 <begin value="0"/>
-<end value="1000"/>
+<end value="100"/>
 </time>
 
 </configuration>

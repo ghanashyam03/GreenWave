@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-02-04 19:17:41 by Eclipse SUMO netconvert Version 1.21.0
+<!-- generated on 2025-02-10 10:31:45 by Eclipse SUMO netconvert Version 1.21.0
 <netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <osm-files value="map.osm"/>
     </input>
 
     <output>
-        <output-file value="network.net.xml"/>
     </output>
 
     <projection>
-        <proj.utm value="true"/>
     </projection>
 
     <processing>
-        <geometry.remove value="true"/>
-        <roundabouts.guess value="true"/>
     </processing>
 
     <tls_building>
-        <tls.join value="true"/>
-        <tls.guess-signals value="true"/>
     </tls_building>
 
     <ramp_guessing>
-        <ramps.guess value="true"/>
     </ramp_guessing>
 
 </netconvertConfiguration>
@@ -44,6 +36,9 @@
     <type id="highway.tertiary" priority="10" numLanes="1" speed="22.22" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" oneway="0"/>
     <type id="highway.track" priority="1" numLanes="1" speed="5.56" allow="pedestrian motorcycle moped bicycle" oneway="0"/>
     <type id="highway.unclassified" priority="4" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" oneway="0"/>
+
+    <!-- Add all necessary edges and connections here -->
+    <!-- Ensure all edges are properly connected -->
 
     <edge id=":10051141946_0" function="internal">
         <lane id=":10051141946_0_0" index="0" allow="pedestrian bicycle" speed="5.56" length="7.31" width="2.00" shape="1150.32,3298.60 1149.46,3298.97 1148.34,3299.96 1146.95,3301.56 1145.28,3303.77"/>
